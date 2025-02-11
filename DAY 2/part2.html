@@ -8,27 +8,48 @@
 <body>
     <h3>Forms</h3>
     <form action="action.html">
-        <label for="First Name">First Name:</label>
-        <input type="text" placeholder="Enter your First Name" required><br>
-        <label for="Last Name">Last Name:</label>
-        <input type="text" placeholder="Enter your Last Name" required><br>
-        <label for="email">Email:</label>
-        <input type="text" placeholder="Enter your email" value="@sjit.ac.in" required><br>
-        <label for="password">Password:</label>
-        <input type="password" placeholder="Enter your password" required><br>
-        <label for="dob">Date of Birth:</label>
-        <input type="date" placeholder="Enter your Date of Birth" required><br>
-        <label for="phone_no">Phone Number</label>
-        <input type="tel" placeholder="Enter your Phone Number" required><br>
-        <label for="gender">Gender</label>
-        <input type="radio">Male
-        <input type="radio">Female
-        <input type="radio">Others<br>
-        <button type="submit">Signup</button>
+        <table border="1px">
+            <tr>
+                <td><label for="First Name">First Name:</label></td>
+                <td><input type="text" placeholder="Enter your First Name" required></td><br>
+            </tr>
+            <tr>
+                <td><label for="Last Name">Last Name:</label></td>
+                <td><input type="text" placeholder="Enter your Last Name" required></td><br>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="text" placeholder="Enter your email" value="@sjit.ac.in" required></td><br>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" placeholder="Enter your password" required></td><br>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" placeholder="Enter your Date of Birth" required></td><br>
+            </tr>
+            <tr>
+                <td><label for="phone_no">Phone Number</label></td>
+                <td><input type="tel" placeholder="Enter your Phone Number" required></td><br>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="others" name="gender" value="others">
+                    <label for="others">Others</label>
+                </td><br>
+            </tr>
+        </table>
+            
+            <button type="submit">Signup</button>
     </form>
-    <p>Already having account? <a href="">Login</a></p>
+    <p>Already having account? <a href="login.html">Login</a></p>
     <hr>
     <a href="index.html">To go to previous page</a>
-    <a href="login.html">Click for login</a>
 </body>
 </html>
