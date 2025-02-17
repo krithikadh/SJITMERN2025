@@ -1,1 +1,1 @@
-console.log("This is printed using console in js");
+console.log("This is printed using js console");

@@ -18,7 +18,7 @@ console.log(typeof(array))
 //Objects
 Object1 = { // Way 1
     "firstName" : "Krithika",
-    "lastName" : "D H", 
+    "lastName" : "D H",
     "training" : "MERN Stack",
     "companyName" : "RAMPeX"
 }

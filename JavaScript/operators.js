@@ -28,7 +28,7 @@ console.log(~c);
 console.log("LeftShiftOperator");
 console.log(55<<3);
 console.log(128<<1);
-// Right Shift Operator
+// Right Shift Operator 
 console.log("RightShiftOperator");
 console.log(55>>3);
 console.log(1>>1);
