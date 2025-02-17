@@ -17,8 +17,8 @@ console.log(array)
 console.log(typeof(array))
 //Objects
 Object1 = { // Way 1
-    firstName : "Lankesh",
-    "lastName" : "Meganathan", 
+    "firstName" : "Krithika",
+    "lastName" : "D H", 
     "training" : "MERN Stack",
     "companyName" : "RAMPeX"
 }
@@ -26,8 +26,8 @@ console.log(Object1);
 Object2 = {}
 Object2.clgName = "sjit"; // Way 2
 Object2.age = 12; 
-Object2["property"] = "Psycho";
-Object2["activity"] = "abnormal";
+Object2["property"] = "ABC";
+Object2["activity"] = "DEF";
 console.log(Object2);
 Object3 = new Object()
 Object3.college = "St Josephs Group"
