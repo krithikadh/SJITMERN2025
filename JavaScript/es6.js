@@ -24,3 +24,4 @@ console.log(a);
 }
 console.log(a);
 console.log(e);
+console.log(b);

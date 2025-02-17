@@ -22,8 +22,8 @@ for(index in array){
 }
 // ForOf Loop
 Object1 = { // Way 1
-    firstName : "Lankesh",
-    "lastName" : "Meganathan", 
+    "firstName" : "Krithika",
+    "lastName" : "D H", 
     "training" : "MERN Stack",
     "companyName" : "RAMPeX"
 }

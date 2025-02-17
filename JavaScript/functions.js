@@ -1,4 +1,4 @@
 function testFuntion(){
-    console.log("This is a test function");
+    console.log("This is test function");
 }
 testFuntion();
