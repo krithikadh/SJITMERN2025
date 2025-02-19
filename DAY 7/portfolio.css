@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(14, 19, 21);
+}
+
+nav{
+    display:flex;
+    background-color: #7fff00;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+top{
+    color: #c0f;
+}
