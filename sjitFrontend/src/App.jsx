@@ -10,7 +10,7 @@ import UseState from './components/FunctionalComponents/Hooks/UseState'
 import Login from './components/FunctionalComponents/Login'
 import UseEffectAPI from './components/FunctionalComponents/Hooks/UseEffectAPI'
 import UseRef from './components/FunctionalComponents/Hooks/UseRef'
-import UseMemo from './components/FunctionalComponents/UseMemo'
+import UseMemo from './components/FunctionalComponents/Hooks/UseMemo'
 function App() {
   return (
     <main>
