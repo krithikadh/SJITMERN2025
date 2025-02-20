@@ -6,3 +6,9 @@ nav{
     justify-content: space-around;
     padding: 10px;
 }
+
+b{
+    color: rgb(85, 26, 139);
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+}

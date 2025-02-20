@@ -40,6 +40,7 @@ export default Navbar;
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 import { useState } from "react";
+
 const Navbar = () => {
   const [showList, setShowList] = useState(false);
   return (
@@ -59,7 +60,7 @@ const Navbar = () => {
           onMouseLeave={() => setShowList(false)}
           style={{ display: "inline-block", position: "relative" }}
         >
-          <span style={{ cursor: "pointer" }}>Hooks</span>
+          <span style={{ cursor: "pointer" }}><b>Hooks</b></span>
           {showList && (
             <ol
               style={{
@@ -76,6 +77,15 @@ const Navbar = () => {
               </li>
               <li onClick={() => setShowList(false)}>
                 <Link to="/use-effect">useEffect</Link>
+              </li>
+              <li onClick={() => setShowList(false)}>
+                <Link to="/use-effect-api">useEffectAPI</Link>
+              </li>
+              <li onClick={() => setShowList(false)}>
+                <Link to="/use-ref">useRef</Link>
+              </li>
+              <li onClick={() => setShowList(false)}>
+                <Link to="/use-memo">useMemo</Link>
               </li>
             </ol>
           )}
