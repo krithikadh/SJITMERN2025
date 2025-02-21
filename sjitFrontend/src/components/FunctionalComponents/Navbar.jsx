@@ -87,9 +87,18 @@ const Navbar = () => {
               <li onClick={() => setShowList(false)}>
                 <Link to="/use-memo">useMemo</Link>
               </li>
+              <li onClick={() => setShowList(false)}>
+                <Link to="/use-callback">useCallback</Link>
+              </li>
+              <li onClick={() => setShowList(false)}>
+                <Link to="/use-memoize">useMemoizeCustomHook</Link>
+              </li>
             </ol>
           )}
         </div>
+        <li>
+          <Link to="/hoc">HoC</Link>
+        </li>
         <li>
           <Link to="/contact">Contact</Link>
         </li>

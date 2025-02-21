@@ -11,6 +11,9 @@ import Login from './components/FunctionalComponents/Login'
 import UseEffectAPI from './components/FunctionalComponents/Hooks/UseEffectAPI'
 import UseRef from './components/FunctionalComponents/Hooks/UseRef'
 import UseMemo from './components/FunctionalComponents/Hooks/UseMemo'
+import UseCallback from './components/FunctionalComponents/Hooks/UseCallback'
+import UseMemoize from './components/FunctionalComponents/Hooks/UseMemoize'
+import HoC from './components/FunctionalComponents/HoC/HoC'
 function App() {
   return (
     <main>
@@ -28,6 +31,9 @@ function App() {
           <Route path='/use-effect-api' element={<UseEffectAPI/>}/>
           <Route path='/use-ref' element={<UseRef/>}/>
           <Route path='/use-memo' element={<UseMemo/>}/>
+          <Route path='/use-callback' element={<UseCallback/>}/>
+          <Route path='/use-memoize' element={<UseMemoize/>}/>
+          <Route path='/hoc' element={<HoC/>}/>
         </Routes>
       </BrowserRouter>
     </main>
