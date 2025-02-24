@@ -16,6 +16,7 @@ import UseMemoize from './components/FunctionalComponents/Hooks/UseMemoize'
 import HoC from './components/FunctionalComponents/HoC/HoC'
 import Memo from './components/FunctionalComponents/Memoization/Memo'
 import LazyLoadingAndSuspense from './components/FunctionalComponents/Memoization/LazyLoadingAndSuspense'
+import CoE from './components/FunctionalComponents/CoE'
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path='/hoc' element={<HoC/>}/>
           <Route path='/memo' element={<Memo/>}/>
           <Route path='/lazy' element={<LazyLoadingAndSuspense/>}/>
+          <Route path='/res' element={<CoE/>}/>
         </Routes>
       </BrowserRouter>
     </main>

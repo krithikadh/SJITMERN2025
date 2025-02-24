@@ -137,6 +137,10 @@ const Navbar = () => {
         </div>
 
         <li>
+          <Link to="/res">ContextAPI</Link>
+        </li>
+
+        <li>
           <Link to="/contact">Contact</Link>
         </li>
 
