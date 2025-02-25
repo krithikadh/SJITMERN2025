@@ -8,7 +8,7 @@ const PORT = 3001;
 dotenv.config()
 
 mdb
-  .connect("process.env.MONGODB_URL") //if it doesn't connect with localhost, replace it with 127.0.0.1 ip
+  .connect(process.env.MONGODB_URL) //if it doesn't connect with localhost, replace it with 127.0.0.1 ip
   .then(() => {
     console.log("MDB Connection Successful");
   })
@@ -38,7 +38,7 @@ app.post("/signup",(req,res)=>{
         });
         newSignup.save();
         console.log("Signup Successful");
-        ({message:"Signup Successful",isSignUp:true});
+        res.status(201).json({message:"Signup Successful",isSignUp:true});
     }catch(error){
         console.log(error);
         res.status(400).json({message:"Signup Unsuccessful",isSignUp:false});
