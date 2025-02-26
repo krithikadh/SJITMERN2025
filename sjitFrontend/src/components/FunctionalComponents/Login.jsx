@@ -1,76 +1,18 @@
-/*
-function Login(){
-    return(
-        <div>
-            <h1>Login Page</h1>
-        </div>
-    )
-}
-
-export default Login
-*/
-
-/*
-const Login=()=>{
-    return(
-        <div>
-            <h2>Login</h2>
-                <form action="">
-                    Email: <input type="text" />
-                    Password: <input type="password" />
-                    <button>Submit</button>
-                </form>
-        </div>
-    );
-}
-export default Login;
-*/
-
-import { useEffect, useState } from "react";
-import SignUp from './Signup';
 import { Link } from "react-router-dom";
 
-const Login = () => {
-  const [loginData, setLoginData] = useState({
-    email: "",
-    password: "",
-  });
-
-  useEffect(() => {
-    console.log("Login Data:", loginData);
-  }, [loginData]);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setLoginData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
+function Login() {
   return (
     <section>
-      <h1>LOGIN FORM</h1>
-        Email:
-        <input
-          type="email"
-          name="email"
-          value={loginData.email}
-          onChange={handleChange}
-        />
-        <br />
-        Password:
-        <input
-          type="password"
-          name="password"
-          value={loginData.password}
-          onChange={handleChange}
-        />
-        <br />
-        <button type="submit">Login</button><br/>
-        <p>New User? <Link to={'/signup'}>Signup</Link></p>
+      <h1>Login</h1>
+      <form action="/">
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" required /> <br />
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" required /><br />
+        <button type="submit">Login</button>
+      </form>
+      <p>Create an account?<Link to='/signup'>Signup</Link></p>
     </section>
   );
-};
-
+}
 export default Login;

@@ -1,121 +1,93 @@
-/*
-function Signup(){
-    return(
-        <div>
-            <h1>Signup Page</h1>
-        </div>
-    )
-}
-
-export default Signup
-*/
-
-import { useEffect, useState } from "react";
-import Login from "./Login";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
-const UseEffect = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    dob: "",
-    phone: "",
-    gender: "",
-  });
-
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+function Signup() {
+  const navigate = useNavigate();
+  const [firstName, setFN] = useState("");
+  const [lastName, setLN] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPass] = useState("");
+  const [phoneNumber, setPN] = useState(0);
+  const handleSignup = async (event) => {
+    event.preventDefault();
+    const req = await axios.post("https://sjit2025mern.onrender.com/signups", {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+      phoneNumber: phoneNumber,
+    });
+    const message = req.data.message;
+    const isSignup = req.data.isSignUp;
+    if (isSignup) {
+      alert(message);
+      navigate("/login");
+    }
+    else{
+      alert(message)
+    }
   };
-
   return (
-    <section>
-      <h1>SIGNUP FORM</h1>
-      First Name:
-      <input
-        type="text"
-        name="firstName"
-        value={formData.firstName}
-        onChange={handleChange}
-      />
-      <br />
-      Last Name:
-      <input
-        type="text"
-        name="lastName"
-        value={formData.lastName}
-        onChange={handleChange}
-      />
-      <br />
-      Email:
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <br />
-      Password:
-      <input
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-      <br />
-      Date of Birth:
-      <input
-        type="date"
-        name="dob"
-        value={formData.dob}
-        onChange={handleChange}
-      />
-      <br />
-      Phone Number:
-      <input
-        type="text"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-      />
-      <br />
-      Gender:
-      <input
-        type="radio"
-        name="gender"
-        value="Male"
-        checked={formData.gender === "Male"}
-        onChange={handleChange}
-      />{" "}Male
-      <input
-        type="radio"
-        name="gender"
-        value="Female"
-        checked={formData.gender === "Female"}
-        onChange={handleChange}
-      />{" "}Female
-      <input
-        type="radio"
-        name="gender"
-        value="Others"
-        checked={formData.gender === "Others"}
-        onChange={handleChange}
-      />{" "}Others
-      <br/><br/>
-      <button type="submit">Submit</button>
-      <br/>
-      <p>Already have an account? <Link to={'/login'}>Login</Link></p>
-    </section>
+    <div>
+      <h1>Signup</h1>
+      <form onSubmit={handleSignup}>
+        <label htmlFor="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          value={firstName}
+          onChange={(e) => setFN(e.target.value)}
+          required
+        />
+        <br />
+        <br />
+        <label htmlFor="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          value={lastName}
+          onChange={(e) => setLN(e.target.value)}
+          required
+        />
+        <br />
+        <br />
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <br />
+        <br />
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPass(e.target.value)}
+          required
+        />
+        <br />
+        <br />
+        <label htmlFor="phoneNumber">Phone Number:</label>
+        <input
+          type="number"
+          id="phoneNumber"
+          value={phoneNumber}
+          onChange={(e) => setPN(parseInt(e.target.value))}
+          required
+        />
+        <br />
+        <br />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>
+        Already have an account?<Link to="/login">Login</Link>
+      </p>
+    </div>
   );
-};
-
-export default UseEffect;
+}
+export default Signup;
