@@ -51,7 +51,7 @@ function Login() {
         <button type="submit">Login</button>
       </form>
       <p>
-        Already have an account?<Link to="/login">Login</Link>
+        New User?<Link to="/login">Signup</Link>
       </p>
     </div>
   );
