@@ -11,7 +11,7 @@ function Signup() {
   const [phoneNumber, setPN] = useState(0);
   const handleSignup = async (event) => {
     event.preventDefault();
-    const req = await axios.post("https://sjit2025mern.onrender.com/signups", {
+    const req = await axios.post("http://localhost:3001/signups", {
       firstName: firstName,
       lastName: lastName,
       email: email,
