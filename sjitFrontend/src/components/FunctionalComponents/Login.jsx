@@ -10,7 +10,7 @@ function Login() {
   
   const handleLogin = async (event) => {
     event.preventDefault();
-    var req = await axios.post("http://localhost:3001/login", {
+    var req = await axios.post("https://sjitmern2025.onrender.com/login", {
       email,
       password,
     });
